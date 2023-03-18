@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bulk Email Sender</title>
+	</head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        .container {
+            margin: auto;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #444444;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 10px;
+            color: #444444;
+            font-weight: bold;
+        }
+        input[type="email"],
+        input[type="password"],
+        input[type="provider"],
+        input[type="text"],
+        textarea {
+            font-size: 16px;
+            padding: 10px;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+            background-color: #ffffff;
+            margin-bottom: 20px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0069d9;
+        }
+        input[type="submit"]:active {
+            background-color: #0062cc;
+        }
+    </style>
+	<body>
+		<h1>Bulk Email Sender</h1>
+		<form method="POST">
+			<label for="from">From:</label>
+			<input type="email" name="from" required><br>
+
+			<label for="password">Password:</label>
+			<input type="password" name="password" required><br>
+
+            <label for="provider">Provider:</label>
+			<input type="provider" name="provider" required><br>
+
+			<label for="to">To:</label>
+			<input type="text" name="to" required><br>
+
+			<label for="subject">Subject:</label>
+			<input type="text" name="subject" required><br>
+
+			<label for="body">Message:</label>
+			<textarea name="body" required></textarea><br>
+
+			<input type="submit" value="Send">
+		</form>
+	</body>
+</html>
